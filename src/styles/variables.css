@@ -1,0 +1,56 @@
+/* ========================================
+   CSS VARIABLES - Design system tokens
+   ======================================== */
+
+:root {
+  /* Colors */
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-text-primary: #333;
+  --color-text-secondary: #666;
+  --color-background: #ffffff;
+  --color-background-light: #f8f9fa;
+  --color-border: #e0e0e0;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow-dark: rgba(0, 0, 0, 0.3);
+
+  /* Typography */
+  --font-family-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-family-mono: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+
+  /* Font sizes */
+  --font-size-hero: 8rem;
+  --font-size-hero-mobile: 4rem;
+  --font-size-hero-small: 3rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 5rem;
+
+  /* Z-index layers */
+  --z-index-base: 1;
+  --z-index-elevated: 10;
+  --z-index-sticky: 1000;
+  --z-index-fixed: 1030;
+  --z-index-modal: 1050;
+  --z-index-tooltip: 1070;
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+  --transition-fast: 0.2s ease;
+
+  /* Border radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 15px var(--color-shadow);
+  --shadow-md: 0 20px 60px var(--color-shadow-dark);
+}

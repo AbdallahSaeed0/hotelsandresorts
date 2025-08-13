@@ -1,0 +1,62 @@
+.floating-actions {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+}
+
+.floating-actions .btn {
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0px;
+  border: 0.0625rem solid hsla(0, 0%, 87%, 0.2);
+  background-color: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.room-text {
+  color: #d073b2;
+}
+
+.table-text {
+  color: #8b9dcc;
+}
+
+.play-icon {
+  font-size: 0.7rem;
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .floating-actions {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .floating-actions .btn {
+    flex: 1;
+    margin: 0;
+    font-size: 0.9rem;
+    padding: 1rem 0.75rem;
+    justify-content: center;
+  }
+
+  .floating-actions .btn:first-child {
+    margin-left: 0;
+  }
+
+  .floating-actions .btn:last-child {
+    margin-right: 0;
+  }
+}

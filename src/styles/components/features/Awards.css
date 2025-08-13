@@ -1,0 +1,121 @@
+.awards-section {
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Marquee Styles */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: white;
+  position: relative;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  font-size: .8rem;
+  font-weight: bold;
+  margin-right: .3rem;
+  color: #000;
+}
+
+.marquee-play-icon {
+  font-size: .7rem;
+  margin-right: 1rem;
+  color: #000;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Awards Content Wrapper */
+.awards-content-wrapper {
+  position: relative;
+  z-index: 10;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+}
+
+/* Swiper Styles */
+.awards-swiper {
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
+  margin: 0 1rem;
+  overflow: visible;
+}
+
+.awards-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Award Items */
+.award-item {
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  min-width: 220px;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.award-logo {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.award-logo img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.awards-swiper .swiper {
+  overflow: visible;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 1rem;
+  }
+
+  .award-logo {
+   
+  }
+}
+
+@media (max-width: 576px) {
+  .marquee-text {
+    font-size: 0.9rem;
+  }
+  .awards-swiper, .award-item{
+    padding: 0;
+  }
+
+  .award-logo {
+    
+  }
+}

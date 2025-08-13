@@ -1,0 +1,30 @@
+.index-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.content-section h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.content-section p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

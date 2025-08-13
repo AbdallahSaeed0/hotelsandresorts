@@ -1,0 +1,354 @@
+/* Playtime Carousel Section */
+.playtime-carousel-section {
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playtime-carousel-section .holographic-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .carousel-controls {
+    display: none;
+  }
+}
+
+.control-btn {
+  width: 50px;
+  height: 50px;
+  background: #e3e3e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-size: 1.2rem;
+  border: 1px solid #e3e3e3;
+}
+
+.control-btn:hover:not(.disabled) {
+  transform: translateY(-2px);
+  border: 1px solid #e3e3e3;
+}
+
+.control-btn:active:not(.disabled) {
+  transform: translateY(0);
+}
+
+.control-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f5f5f5;
+  color: #999;
+}
+
+.control-btn.disabled:hover {
+  background: #f5f5f5;
+  color: #999;
+  transform: none;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  padding-right: 0;
+}
+
+.playtime-swiper {
+  overflow: visible;
+}
+
+.playtime-swiper .swiper-wrapper {
+  padding-right: 0;
+}
+
+/* Carousel Slides */
+.carousel-slide {
+  height: auto;
+}
+
+playtime-carousel-section .slide-content {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  overflow: hidden;
+}
+
+/* Brand Logo Section */
+.brand-logo-section {
+  background: #f8f9fa;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.brand-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 165 / 250;
+  background: #1d1d1d;
+  overflow: hidden;
+}
+
+.slide-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Celebratory Experience Section */
+.celebratory-experience-section {
+  padding: 2rem 0 6rem 0;
+  background: #ffffff;
+  position: relative;
+}
+
+/* Horizontal Divider */
+.section-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 70%;
+  background: #000;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Experience Title */
+.experience-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 0.9;
+  letter-spacing: 0.15em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.title-line {
+  display: block;
+  position: relative;
+  text-align: left;
+}
+
+.title-line:first-child {
+  margin-bottom: -0.1em;
+}
+
+/* Experience Description */
+.experience-description {
+  padding-left: 2rem;
+}
+
+.experience-description p {
+  font-size: 1rem;
+  line-height: 1.1;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.experience-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+
+
+  .experience-title {
+    font-size: 3rem;
+  }
+
+  .experience-description {
+    padding-left: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .playtime-carousel-section {
+    padding: 4rem 0;
+  }
+
+
+  .control-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .brand-logo-section {
+    padding: 0.75rem;
+  }
+
+  .celebratory-experience-section {
+    padding: 4rem 0;
+  }
+
+  .experience-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .experience-description {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .experience-description p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 3.2rem;
+  }
+  .playtime-carousel-section .holographic-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .playtime-carousel-section {
+    padding: 3rem 0;
+  }
+
+  .carousel-controls {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .brand-logo-section {
+    padding: 0.5rem;
+  }
+
+  .video-container {
+    aspect-ratio: 165 / 250;
+  }
+
+  .celebratory-experience-section {
+    padding: 3rem 0;
+  }
+
+  .experience-title {
+    font-size: 2.2rem;
+    letter-spacing: 0.12em;
+  }
+
+  .experience-description p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 576px) {
+  .playtime-carousel-section {
+    padding: 2.5rem 0;
+  }
+
+  .control-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  .brand-logo-section {
+    padding: 0.4rem;
+  }
+
+  .video-container {
+    aspect-ratio: 165 / 250;
+  }
+
+  .celebratory-experience-section {
+    padding: 2.5rem 0;
+  }
+
+  .experience-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+  }
+
+  .experience-description p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Accessibility */
+.control-btn:focus {
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.slide-video {
+  background: #1d1d1d;
+}
+
+.slide-video[src] {
+  background: none;
+}
+
+/* Swiper navigation override */
+.playtime-swiper .swiper-button-next,
+.playtime-swiper .swiper-button-prev {
+  display: none;
+}
+
+/* Ensure proper spacing on all screen sizes */
+.playtime-swiper .swiper-slide {
+  width: auto;
+}
