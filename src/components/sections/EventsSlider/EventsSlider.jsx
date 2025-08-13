@@ -13,6 +13,7 @@ const EventsSlider = () => {
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   const events = [
     {
@@ -54,14 +55,21 @@ const EventsSlider = () => {
   ];
 
   const handleBeforeInit = (swiper) => {
+    // Set up navigation for desktop buttons
     swiper.params.navigation.prevEl = prevButtonRef.current;
     swiper.params.navigation.nextEl = nextButtonRef.current;
     swiperRef.current = swiper;
+    setSwiperInstance(swiper);
+    console.log('Swiper initialized:', swiper);
   };
+
+
 
   const handleSlideChange = (swiper) => {
     setCurrentSlide(swiper.activeIndex);
   };
+
+
 
   return (
     <section className="events-slider-section">
@@ -90,6 +98,11 @@ const EventsSlider = () => {
             <button
               ref={prevButtonRef}
               className={`events-nav-btn events-prev-btn ${currentSlide === 0 ? 'disabled' : ''}`}
+              onClick={() => {
+                if (swiperInstance) {
+                  swiperInstance.slidePrev();
+                }
+              }}
               aria-label="Previous event"
               disabled={currentSlide === 0}
             >
@@ -97,9 +110,13 @@ const EventsSlider = () => {
             </button>
             <button
               ref={nextButtonRef}
-              className={`events-nav-btn events-next-btn ${currentSlide >= events.length - 1 ? 'disabled' : ''}`}
+              className="events-nav-btn events-next-btn"
+              onClick={() => {
+                if (swiperInstance) {
+                  swiperInstance.slideNext();
+                }
+              }}
               aria-label="Next event"
-              disabled={currentSlide >= events.length - 1}
             >
               <FaChevronRight className="events-nav-right" />
             </button>
@@ -112,7 +129,7 @@ const EventsSlider = () => {
             ref={swiperRef}
             modules={[Navigation]}
             spaceBetween={20}
-            slidesPerView={1}
+            slidesPerView={1.3}
             loop={false}
             speed={600}
             initialSlide={0}
@@ -124,11 +141,11 @@ const EventsSlider = () => {
             onSlideChange={handleSlideChange}
             breakpoints={{
               768: {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 20,
               },
               1200: {
-                slidesPerView: 3,
+                slidesPerView: 2.2,
                 spaceBetween: 20,
               },
             }}
@@ -181,17 +198,26 @@ const EventsSlider = () => {
               <div className="events-navigation mobile-navigation">
                 <button
                   className={`events-nav-btn events-prev-btn ${currentSlide === 0 ? 'disabled' : ''}`}
-                  onClick={() => swiperRef.current?.swiper?.slidePrev()}
+                  onClick={() => {
+                    console.log('Mobile prev clicked, swiperInstance:', swiperInstance);
+                    if (swiperInstance) {
+                      swiperInstance.slidePrev();
+                    }
+                  }}
                   aria-label="Previous event"
                   disabled={currentSlide === 0}
                 >
                   <FaChevronLeft className="events-nav-left" />
                 </button>
                 <button
-                  className={`events-nav-btn events-next-btn ${currentSlide >= events.length - 1 ? 'disabled' : ''}`}
-                  onClick={() => swiperRef.current?.swiper?.slideNext()}
+                  className="events-nav-btn events-next-btn"
+                  onClick={() => {
+                    console.log('Mobile next clicked, swiperInstance:', swiperInstance);
+                    if (swiperInstance) {
+                      swiperInstance.slideNext();
+                    }
+                  }}
                   aria-label="Next event"
-                  disabled={currentSlide >= events.length - 1}
                 >
                   <FaChevronRight className="events-nav-right" />
                 </button>

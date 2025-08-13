@@ -3,13 +3,6 @@
    ======================================== */
 
 /* Fixed positioned elements */
-.floating-actions {
-  position: fixed;
-  bottom: var(--spacing-lg);
-  right: var(--spacing-lg);
-  z-index: var(--z-index-sticky);
-}
-
 .explore-button-container {
   position: absolute;
   bottom: var(--spacing-lg);

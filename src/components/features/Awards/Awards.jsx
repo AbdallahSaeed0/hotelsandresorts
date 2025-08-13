@@ -67,8 +67,8 @@ const Awards = () => {
       <div className="awards-content-wrapper">
         <div className="container py-5">
           <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
+            spaceBetween={20}
+            slidesPerView={3}
             breakpoints={{
               640: {
                 slidesPerView: 2,

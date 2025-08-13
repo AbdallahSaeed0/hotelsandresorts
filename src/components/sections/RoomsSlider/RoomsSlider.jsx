@@ -80,17 +80,14 @@ const RoomsSlider = () => {
           spaceBetween={0}
           loop={true}
           speed={600}
-          effect="fade"
-          fadeEffect={{
-            crossFade: true
-          }}
+          effect="slide"
           onSlideChange={handleSlideChange}
           className="rooms-swiper"
           breakpoints={{
             768: {
               slidesPerView: 1,
               spaceBetween: 0,
-              effect: "fade"
+              effect: "slide"
             },
             320: {
               slidesPerView: 1.4,

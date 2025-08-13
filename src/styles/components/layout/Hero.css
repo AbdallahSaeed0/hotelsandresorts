@@ -59,6 +59,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hero-section {
+    height: 95vh;
+  }
   .hero-title {
     font-size: 4rem;
     flex-direction: column;

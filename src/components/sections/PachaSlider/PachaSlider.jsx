@@ -60,6 +60,11 @@ const PachaSlider = () => {
               <button
                 ref={prevButtonRef}
                 className={`pacha-nav-btn pacha-prev-btn ${currentSlide === 0 ? 'disabled' : ''}`}
+                onClick={() => {
+                  if (currentSlide > 0) {
+                    swiperRef.current?.swiper?.slidePrev();
+                  }
+                }}
                 aria-label="Previous event"
                 disabled={currentSlide === 0}
               >
@@ -68,6 +73,11 @@ const PachaSlider = () => {
               <button
                 ref={nextButtonRef}
                 className={`pacha-nav-btn pacha-next-btn ${currentSlide >= pachaEvents.length - 1 ? 'disabled' : ''}`}
+                onClick={() => {
+                  if (currentSlide < pachaEvents.length - 1) {
+                    swiperRef.current?.swiper?.slideNext();
+                  }
+                }}
                 aria-label="Next event"
                 disabled={currentSlide >= pachaEvents.length - 1}
               >

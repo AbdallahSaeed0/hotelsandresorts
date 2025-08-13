@@ -13,6 +13,7 @@ const CulinarySlider = () => {
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   const culinaryItems = [
     {
@@ -37,6 +38,7 @@ const CulinarySlider = () => {
     swiper.params.navigation.prevEl = prevButtonRef.current;
     swiper.params.navigation.nextEl = nextButtonRef.current;
     swiperRef.current = swiper;
+    setSwiperInstance(swiper);
   };
 
   const handleSlideChange = (swiper) => {
@@ -61,6 +63,11 @@ const CulinarySlider = () => {
             <button
               ref={prevButtonRef}
               className={`culinary-nav-btn culinary-prev-btn ${currentSlide === 0 ? 'disabled' : ''}`}
+              onClick={() => {
+                if (swiperInstance) {
+                  swiperInstance.slidePrev();
+                }
+              }}
               aria-label="Previous restaurant"
               disabled={currentSlide === 0}
             >
@@ -69,6 +76,11 @@ const CulinarySlider = () => {
             <button
               ref={nextButtonRef}
               className={`culinary-nav-btn culinary-next-btn ${currentSlide >= culinaryItems.length - 1 ? 'disabled' : ''}`}
+              onClick={() => {
+                if (swiperInstance) {
+                  swiperInstance.slideNext();
+                }
+              }}
               aria-label="Next restaurant"
               disabled={currentSlide >= culinaryItems.length - 1}
             >
@@ -83,7 +95,7 @@ const CulinarySlider = () => {
             ref={swiperRef}
             modules={[Navigation]}
             spaceBetween={20}
-            slidesPerView={1}
+            slidesPerView={1.2}
             loop={false}
             speed={600}
             initialSlide={0}
@@ -95,11 +107,11 @@ const CulinarySlider = () => {
             onSlideChange={handleSlideChange}
             breakpoints={{
               768: {
-                slidesPerView: 1,
+                slidesPerView: 1.3,
                 spaceBetween: 20,
               },
               1200: {
-                slidesPerView: 1,
+                slidesPerView: 1.4,
                 spaceBetween: 20,
               },
             }}

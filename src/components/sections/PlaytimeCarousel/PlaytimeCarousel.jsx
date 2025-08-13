@@ -145,6 +145,7 @@ const PlaytimeCarousel = () => {
                 <button
                   ref={prevButtonRef}
                   className={`control-btn prev-btn ${currentSlide === 0 ? 'disabled' : ''}`}
+                  onClick={() => swiperRef.current?.swiper?.slidePrev()}
                   aria-label="Previous slide"
                   disabled={currentSlide === 0}
                 >
@@ -153,6 +154,7 @@ const PlaytimeCarousel = () => {
                 <button
                   ref={nextButtonRef}
                   className="control-btn next-btn"
+                  onClick={() => swiperRef.current?.swiper?.slideNext()}
                   aria-label="Next slide"
                 >
                   <FaChevronRight />
