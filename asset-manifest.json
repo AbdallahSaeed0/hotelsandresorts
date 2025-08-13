@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/hotelsandresorts/static/css/main.092fdee4.css",
-    "main.js": "/hotelsandresorts/static/js/main.78487ce3.js",
+    "main.css": "/hotelsandresorts/static/css/main.308289fc.css",
+    "main.js": "/hotelsandresorts/static/js/main.92d9b2c4.js",
     "static/media/FPJ-new.svg": "/hotelsandresorts/static/media/FPJ-new.e7b0036b49dbae853f3835aed6a213ee.svg",
     "index.html": "/hotelsandresorts/index.html",
-    "main.092fdee4.css.map": "/hotelsandresorts/static/css/main.092fdee4.css.map",
-    "main.78487ce3.js.map": "/hotelsandresorts/static/js/main.78487ce3.js.map"
+    "main.308289fc.css.map": "/hotelsandresorts/static/css/main.308289fc.css.map",
+    "main.92d9b2c4.js.map": "/hotelsandresorts/static/js/main.92d9b2c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.092fdee4.css",
-    "static/js/main.78487ce3.js"
+    "static/css/main.308289fc.css",
+    "static/js/main.92d9b2c4.js"
   ]
 }
